@@ -7,11 +7,14 @@ function App(){
     const numeros = "0123456789";
     const especiales = "!@#$%^&*";
     function generaContraseña(){
-        if(longitud==""||Number(longitud<4)){
-            setError("Debe ser mayor o igual a 4");
-            setContraseña("");
-            return;
-
+        if (
+           longitud.trim() === "" ||
+           !Number.isInteger(Number(longitud)) ||
+           Number(longitud) < 4
+        ) {
+           setError("La longitud debe ser un número entero mayor o igual a 4");
+           setContraseña("");
+           return;
         }
 
         let nuevaContraseña = "";
@@ -39,7 +42,12 @@ function App(){
             <input
                 type="number"
                 value={longitud}
-                onChange={(e) => setLongitud(e.target.value)}
+                onChange={(e) => {
+                    setLongitud(e.target.value);
+                    setError("");
+                    setContraseña("");
+
+                }}
             />
 
             <button onClick={generaContraseña}>

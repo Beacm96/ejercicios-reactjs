@@ -4,6 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de contraseñas aleatorias</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f2f7;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 420px;
+            padding: 35px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.08);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #222;
+        }
+
+        label {
+            display: block;
+            margin: 25px 0 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #635bff;
+            border-color: transparent;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #635bff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background .2s;
+        }
+
+        button:hover {
+            background: #4942d1;
+        }
+
+        .error {
+            color: #d32f2f;
+            margin-top: 20px;
+        }
+
+        .resultado {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f4f3ff;
+            border-radius: 8px;
+        }
+
+        .password {
+            font-size: 20px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+            color: #423bc1;
+        }
+
+        .resultado span {
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+
 </head>
 <body>
     <div id="root"></div>
